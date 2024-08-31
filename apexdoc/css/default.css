@@ -1,0 +1,232 @@
+/*
+ * Copyright 2023-present, Rose Silver Software LLC, All rights reserved
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+html, body {
+    background-color: rgb(235, 235, 235);
+    margin: 0;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, th, td {
+    font-family: sans-serif;
+}
+
+html, body, th, td {
+    font-size: 14px;
+}
+
+h4 {
+    margin-block-start: 15px;
+    margin-block-end: 10px;
+}
+
+/* Table columns that should be fit to their content, generally all but the last (description) column */
+.fitColumn {
+    white-space: nowrap;
+}
+
+/* Table columns that should grow to fill available space, generally the last (description) column */
+.growColumn {
+    width: 100%;
+}
+
+/* The page header stripe */
+.header {
+    width: 100%;
+    background-color: rgb(150, 150, 150);
+    box-sizing: border-box;
+    padding: 5px;
+    display: block;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* The page navigation stripe */
+.navigation {
+    width: 100%;
+    background-color: rgb(190, 190, 190);
+    box-sizing: border-box;
+    padding: 5px;
+    display: block;
+    float: left;
+    font-size: 16px;
+}
+
+/* The selected navigation tab */
+.navigation .selectedTab {
+    font-weight: bold;
+}
+
+/* The unselected navigation tabs */
+.navigation .unselectedTab {
+    font-weight: inherit;
+}
+
+/* The user-provided overview section if available */
+.overview {
+    background-color: rgb(230, 230, 230);
+    padding: 5px;
+}
+
+/* The navigation list of first characters in the Index tab */
+.indexFirstCharacters {
+    font-size: larger;
+}
+
+/* The anchored first character in the Index tab navigation list */
+.indexAnchoredFirstCharacter {
+    font-weight: bold;
+    font-size: larger;
+}
+
+/* The declaration summary tables */
+.declarations {
+    background-color: rgb(230, 230, 230);
+    padding: 5px;
+}
+
+.declarations code {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.declarations table {
+    border-width: 1px;
+    border-collapse: collapse;
+    table-layout: auto;
+    width: 100%;
+}
+
+.declarations table th {
+    background-color: rgb(190, 190, 190);
+}
+
+.declarations table th, td {
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* The various member (constructors, methods, fields, properties, etc.) blocks */
+.members {
+    background-color: rgb(230, 230, 230);
+    padding: 5px;
+}
+
+/* Anchored member highlighting */
+.members :target {
+    border: rgb(50, 50, 50) dotted thin;
+}
+
+/* An individual member in a members block */
+.member {
+    background-color: rgb(220, 220, 220);
+    padding: 5px;
+}
+
+.member code {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.member table {
+    border-width: 1px;
+    border-collapse: collapse;
+}
+
+.member table td {
+    padding: 3px;
+}
+
+/* The member signature header */
+.signature {
+    background-color: rgb(230, 230, 230);
+    padding: 3px;
+}
+
+/* The member inheritance relationship label */
+.inheritance {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* The "Copied from" prefix when doc is copied from a base declaration */
+.copiedFrom, .copiedFrom a, .copiedFrom code {
+    color: rgb(150, 150, 150);
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* SObject field description tables */
+.fieldDescriptionTable {
+    border-width: 1px;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+/* Explicit code blocks from Markdown `...` or {@code ...}. */
+.explicitCode {
+    line-height: 1.5;
+    padding: 0.1em 0.3em;
+    margin: 0;
+    white-space: break-spaces;
+    background-color: rgba(174, 184, 193, 0.2);
+    border-radius: 6px;
+}
+
+/* Styles for Markdown-generated HTML */
+
+/* Blockquotes */
+.markdownBlockquote {
+    border-left: 5px solid #cccccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+}
+
+/* Tables */
+.markdownTable {
+    display: block;
+    overflow: auto;
+    width: max-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+
+/* TODO: I've tried using ".markdownTable thead|tbody|tr|th|tr" for these, but that "leaks" into other tables in the page. */
+
+.markdownThead {
+    display: table-header-group;
+}
+
+.markdownTbody {
+    display: table-row-group;
+}
+
+.markdownTr {
+    border: 1px solid #aaaaaa;
+}
+
+.markdownTh {
+    border: 1px solid #aaaaaa;
+    padding: 3px;
+}
+
+.markdownTd {
+    border: 1px solid #aaaaaa;
+    padding: 3px;
+}
